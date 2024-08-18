@@ -9,7 +9,6 @@
 <body>
     <h1>Welcome to Gümbedit</h1>
     <p>Edit your photos and videos easily.</p>
-
     <!-- Yükleme Formu -->
     <form id="upload-form" enctype="multipart/form-data">
         <label for="file-upload">Choose a photo or video:</label>
@@ -17,12 +16,10 @@
         <br><br>
         <input type="submit" value="Upload">
     </form>
-
     <!-- Yüklenen Medyaların Önizlemesi -->
     <div id="media-preview">
         <!-- Yüklenen medya burada gösterilecek -->
     </div>
-
     <!-- Şablon Seçimi -->
     <div>
         <label for="template-select">Choose a template:</label>
@@ -44,7 +41,6 @@
             <option value="Courier New">Courier New</option>
         </select>
     </div>
-
     <!-- Kullanıcı Kayıt Formu -->
     <div>
         <h2>Sign Up</h2>
@@ -52,7 +48,6 @@
         <input type="password" id="signup-password" placeholder="Password">
         <button id="signup-button">Sign Up</button>
     </div>
-
     <!-- Kullanıcı Giriş Formu -->
     <div>
         <h2>Log In</h2>
@@ -60,7 +55,6 @@
         <input type="password" id="login-password" placeholder="Password">
         <button id="login-button">Log In</button>
     </div>
-
     <!-- Firebase SDK ve Authentication Kütüphaneleri -->
     <script type="module">
         // Firebase SDK import
@@ -82,8 +76,3 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
     </script>
-
-    <!-- JavaScript dosyasını dahil edin -->
-    <script src="script.js"></script>
-</body>
-</html>
