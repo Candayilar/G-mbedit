@@ -23,63 +23,67 @@
         <!-- Yüklenen medya burada gösterilecek -->
     </div>
 
+    <!-- Şablon Seçimi -->
+    <div>
+        <label for="template-select">Choose a template:</label>
+        <select id="template-select">
+            <option value="default">Default</option>
+            <option value="template1">Template 1</option>
+            <option value="template2">Template 2</option>
+            <option value="template3">Template 3</option>
+        </select>
+    </div>
+
+    <!-- Font Seçimi -->
+    <div>
+        <label for="font-select">Choose a font:</label>
+        <select id="font-select">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+    </div>
+
+    <!-- Kullanıcı Kayıt Formu -->
+    <div>
+        <h2>Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button id="signup-button">Sign Up</button>
+    </div>
+
+    <!-- Kullanıcı Giriş Formu -->
+    <div>
+        <h2>Log In</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-button">Log In</button>
+    </div>
+
+    <!-- Firebase SDK ve Authentication Kütüphaneleri -->
+    <script type="module">
+        // Firebase SDK import
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAy4upANxZn6mjhUthsAu8pcSMUOZKtxWE",
+            authDomain: "gumbedit-e262a.firebaseapp.com",
+            projectId: "gumbedit-e262a",
+            storageBucket: "gumbedit-e262a.appspot.com",
+            messagingSenderId: "189559333199",
+            appId: "1:189559333199:web:6f085a5dba9fb7bc28a53a",
+            measurementId: "G-B3CTV5N7VP"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    </script>
+
+    <!-- JavaScript dosyasını dahil edin -->
     <script src="script.js"></script>
 </body>
-<!-- Şablon Seçimi -->
-<div>
-    <label for="template-select">Choose a template:</label>
-    <select id="template-select">
-        <option value="default">Default</option>
-        <option value="template1">Template 1</option>
-        <option value="template2">Template 2</option>
-        <option value="template3">Template 3</option>
-    </select>
-</div>
-
-<!-- Font Seçimi -->
-<div>
-    <label for="font-select">Choose a font:</label>
-    <select id="font-select">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Times New Roman">Times New Roman</option>
-        <option value="Courier New">Courier New</option>
-    </select>
-</div>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAy4upANxZn6mjhUthsAu8pcSMUOZKtxWE",
-    authDomain: "gumbedit-e262a.firebaseapp.com",
-    projectId: "gumbedit-e262a",
-    storageBucket: "gumbedit-e262a.appspot.com",
-    messagingSenderId: "189559333199",
-    appId: "1:189559333199:web:6f085a5dba9fb7bc28a53a",
-    measurementId: "G-B3CTV5N7VP"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-<!-- Kullanıcı Kayıt Formu -->
-<div>
-    <h2>Sign Up</h2>
-    <input type="email" id="signup-email" placeholder="Email">
-    <input type="password" id="signup-password" placeholder="Password">
-    <button id="signup-button">Sign Up</button>
-</div>
-<!-- Kullanıcı Giriş Formu -->
-<div>
-    <h2>Log In</h2>
-    <input type="email" id="login-email" placeholder="Email">
-    <input type="password" id="login-password" placeholder="Password">
-    <button id="login-button">Log In</button>
-</div>
+</html>
