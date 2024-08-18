@@ -90,3 +90,41 @@ function applyTemplateAndFont(mediaElement) {
             mediaElement.style.border = 'none';
     }
 }
+// Firebase Authentication nesnesini alın (index.html'deki script ile tanımlı olmalı)
+const auth = getAuth();
+
+// Kullanıcı Kayıt İşlemi
+document.getElementById('signup-button').addEventListener('click', function() {
+    var email = document.getElementById('signup-email').value;
+    var password = document.getElementById('signup-password').value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Başarılı kayıt işlemi
+            var user = userCredential.user;
+            alert("Registration successful!");
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert("Error: " + errorMessage);
+        });
+});
+
+// Kullanıcı Giriş İşlemi
+document.getElementById('login-button').addEventListener('click', function() {
+    var email = document.getElementById('login-email').value;
+    var password = document.getElementById('login-password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Başarılı giriş işlemi
+            var user = userCredential.user;
+            alert("Login successful!");
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert("Error: " + errorMessage);
+        });
+});
