@@ -1,0 +1,16 @@
+body {
+    background-color: #1E3A8A; /* Koyu mavi arka plan */
+    color: #FFFFFF; /* Beyaz metin rengi */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+}
