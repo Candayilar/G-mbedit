@@ -55,24 +55,26 @@
         <input type="password" id="login-password" placeholder="Password">
         <button id="login-button">Log In</button>
     </div>
-    <!-- Firebase SDK ve Authentication Kütüphaneleri -->
     <script type="module">
-        // Firebase SDK import
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-        // Firebase Configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAy4upANxZn6mjhUthsAu8pcSMUOZKtxWE",
-            authDomain: "gumbedit-e262a.firebaseapp.com",
-            projectId: "gumbedit-e262a",
-            storageBucket: "gumbedit-e262a.appspot.com",
-            messagingSenderId: "189559333199",
-            appId: "1:189559333199:web:6f085a5dba9fb7bc28a53a",
-            measurementId: "G-B3CTV5N7VP"
-        };
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC97UsYPnvfAAugELztoIKtXytUAEYpOYA",
+    authDomain: "gumbedit-d8f43.firebaseapp.com",
+    projectId: "gumbedit-d8f43",
+    storageBucket: "gumbedit-d8f43.appspot.com",
+    messagingSenderId: "14632551081",
+    appId: "1:14632551081:web:d4ea7f46894e2e26a4dfb8",
+    measurementId: "G-220W6Y6VHT"
+  };
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-    </script>
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
