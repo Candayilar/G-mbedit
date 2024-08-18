@@ -11,3 +11,22 @@
     <p>Edit your photos and videos easily.</p>
 </body>
 </html>
+<body>
+    <h1>Welcome to Gümbedit</h1>
+    <p>Edit your photos and videos easily.</p>
+
+    <!-- Yükleme Formu -->
+    <form id="upload-form" enctype="multipart/form-data">
+        <label for="file-upload">Choose a photo or video:</label>
+        <input type="file" id="file-upload" name="file-upload" accept="image/*,video/*">
+        <br><br>
+        <input type="submit" value="Upload">
+    </form>
+
+    <!-- Yüklenen Medyaların Önizlemesi -->
+    <div id="media-preview">
+        <!-- Yüklenen medya burada gösterilecek -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
