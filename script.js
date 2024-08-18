@@ -110,7 +110,6 @@ document.getElementById('signup-button').addEventListener('click', function() {
             alert("Error: " + errorMessage);
         });
 });
-
 // Kullanıcı Giriş İşlemi
 document.getElementById('login-button').addEventListener('click', function() {
     var email = document.getElementById('login-email').value;
